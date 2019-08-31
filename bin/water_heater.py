@@ -28,9 +28,9 @@ msg['Subject'] = 'The Water Heater is turned ON'
 msg['From'] = SENDER
 msg['To'] = RECIPIENT
 
-send =smtplib.SMTP('localhost')
-send.send_message(msg)
-send.quit()
+#send =smtplib.SMTP('localhost')
+#send.send_message(msg)
+#send.quit()
 
 bus.write_byte_data(DEVICE_ADDR, RELAY, 0xFF)
 print('Relay '+config['WATERHEATER']['RELAY']+' is on')
@@ -48,9 +48,9 @@ msg['Subject'] = 'The Water Heater is turned OFF'
 msg['From'] = SENDER
 msg['To'] = RECIPIENT
 
-send =smtplib.SMTP('localhost')
-send.send_message(msg)
-send.quit()
+#send =smtplib.SMTP('localhost')
+#send.send_message(msg)
+#send.quit()
 
 
 sys.exit()
